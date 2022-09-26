@@ -1,0 +1,9 @@
+@import "./mixin.scss";
+.container-header {
+  @include b("red");
+}
+
+.container-body {
+  @include b("green");
+  height: 200px;
+}

@@ -1,0 +1,93 @@
+$--primary-color: rgba(53, 165, 117, 1);
+$--primary-color-light-1: rgba(53, 165, 117, 0.1);
+$--warning-color: rgba(244, 191, 78, 1);
+$--warning-color-light-1: rgba(244, 191, 78, 0.1);
+$--danger-color: rgba(236, 106, 94, 1);
+$--danger-color-light-1: rgba(236, 106, 94, 0.1);
+$--info-color: rgba(32, 43, 59, 1);
+$--info-color-light-1: rgba(32, 43, 59, 0.1);
+$--disabled-color: rgba(220, 223, 230, 1);
+$--disabled-color-light-1: rgba(220, 223, 230, 0.1);
+$--disabled-text-color: rgba(144, 147, 153, 1);
+
+@forward "element-plus/theme-chalk/src/common/var.scss" with (
+  $colors: (
+    "primary": (
+      "base": $--primary-color,
+    ),
+    "warning": (
+      "base": $--warning-color,
+    ),
+    "danger": (
+      "base": $--danger-color,
+    ),
+    "info": (
+      "base": $--info-color,
+    ),
+  ),
+  $button-border-radius: (
+    "default": 2px,
+  ),
+  $border-radius: (
+    "base": 2px,
+  ),
+  $button-padding-horizontal: (
+    "default": 16px,
+  )
+);
+.el-button {
+  font-size: 12px;
+  font-weight: 400;
+  &.is-plain {
+    background: white;
+  }
+  &--primary {
+    &.is-plain {
+      color: $--primary-color;
+      &:hover {
+        background: $--primary-color-light-1;
+      }
+    }
+  }
+  &--danger {
+    &.is-plain {
+      color: $--danger-color;
+      &:hover {
+        background: $--danger-color-light-1;
+      }
+    }
+  }
+  &--warning {
+    &.is-plain {
+      color: $--warning-color;
+      &:hover {
+        background: $--warning-color-light-1;
+      }
+    }
+  }
+  &--info {
+    &.is-plain {
+      color: $--info-color;
+      &:hover {
+        background: $--info-color-light-1;
+      }
+    }
+  }
+  &.is-disabled {
+    border-color: $--disabled-color;
+    background: $--disabled-color;
+    &:hover {
+      border-color: $--disabled-color;
+      background: $--disabled-color;
+    }
+    &.is-plain {
+      color: $--disabled-text-color;
+      border-color: $--disabled-color;
+      &:hover {
+        color: $--disabled-text-color;
+        border-color: $--disabled-color;
+        background: $--disabled-color-light-1;
+      }
+    }
+  }
+}
